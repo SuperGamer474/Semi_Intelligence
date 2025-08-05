@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SI Chat - Ultimate Epic Style</title>
+  <script type="module">
+    // We'll update this when the dropdown changes
+    export let currentModelUrl = "https://semiintelligence.pythonanywhere.com/model/model_6R";
+
+    import { loadModel, get_si_response } from './SI.js';
+
+    // Pre-load the default model
+    (async () => {
+      await loadModel(currentModelUrl);
+    })();
+
+    // Expose a function to switch models
+    window.switchModel = async (newUrl) => {
+      currentModelUrl = newUrl;
+      await loadModel(currentModelUrl);
+      // Optionally: clear chat or notify the user
+      const notice = document.createElement('div');
+      notice.classList.add('message', 'bot');
+      notice.textContent = `🛠️ Switched model to: ${newUrl.split('/').pop()}`;
+      document.getElementById('chatMessages').appendChild(notice);
+      document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
+    };
+
+    // Handle form submission
+    window.handleSubmit = async (e) => {
+      e.preventDefault();
+      const chatInput = document.getElementById('chatInput');
+      const text = chatInput.value.trim();
+      if (!text) return;
+      addMessage(text, 'user');
+      chatInput.value = '';
+
+      setTimeout(async () => {
+        const reply = (await get_si_response(text)).trim();
+        addMessage(reply, 'bot');
+      }, 300);
+    };
+
+    // Helper to append messages
+    window.addMessage = (text, sender) => {
+      const msg = document.createElement('div');
+      msg.classList.add('message', sender);
+      msg.textContent = text;
+      const container = document.getElementById('chatMessages');
+      container.appendChild(msg);
+      container.scrollTop = container.scrollHeight;
+    };
+  </script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #0f111a;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #e0e6f0;
+    user-select: none;
+  }
+
+  .chat-container {
+    background: #1a1d2e;
+    width: 420px;
+    max-width: 90vw;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px #3f51b5aa;
+    overflow: hidden;
+  }
+
+  .chat-header {
+    background: #2c3150;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #8ab4f8;
+    text-align: center;
+    letter-spacing: 1.2px;
+    box-shadow: 0 2px 5px #0009 inset;
+  }
+
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    scroll-behavior: smooth;
+  }
+
+  .message {
+    max-width: 75%;
+    padding: 15px 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    line-height: 1.4;
+    white-space: pre-line;
+    word-wrap: break-word;
+  }
+
+  .message.user {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #4f97ff, #6fbfff);
+    color: #fff;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 4px 10px #4f97ff88;
+    animation: slideInRight 0.3s ease forwards;
+  }
+
+  .message.bot {
+    align-self: flex-start;
+    background: #2b2f4a;
+    color: #a8b3d1;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 4px 10px #2b2f4aaa;
+    font-family: 'Courier New', Courier, monospace;
+    animation: slideInLeft 0.3s ease forwards;
+  }
+
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .chat-input-area {
+    background: #2c3150;
+    padding: 15px 20px;
+    display: flex;
+    gap: 12px;
+  }
+
+  input.chat-input {
+    flex: 1;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #1a1d2e;
+    color: #e0e6f0;
+    transition: background-color 0.2s ease;
+  }
+
+  input.chat-input::placeholder {
+    color: #8893b3;
+  }
+
+  input.chat-input:focus {
+    background: #25304b;
+    box-shadow: 0 0 8px #4f97ffaa;
+  }
+
+  button.send-btn {
+    background: #4f97ff;
+    border: none;
+    border-radius: 30px;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 15px #4f97ffbb;
+  }
+
+  button.send-btn:hover {
+    background: #6fbfff;
+    box-shadow: 0 6px 20px #6fbfffcc;
+  }
+
+  button.send-btn:active {
+    background: #3e7ddb;
+  }
+
+  /* Scrollbar Styling */
+  .chat-messages::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .chat-messages::-webkit-scrollbar-thumb {
+    background: #4f97ff88;
+    border-radius: 20px;
+  }
+
+  .chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+  }
+</style>
+</head>
+
+<body>
+  <!-- Name prompt -->
+  <p style="position: fixed; top: 0; left: 0; margin: 0; padding: 12px 20px; background: linear-gradient(135deg, #00c6ff, #0072ff); color: #fff; font-size: 18px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-bottom-right-radius: 12px; z-index: 9999;">
+    What is your name:
+    <input type="text" id="name" style="margin-left: 10px; padding: 6px 10px; border: none; border-radius: 6px; font-size: 16px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); outline: none;">
+  </p>
+
+  <!-- Model chooser dropdown -->
+  <div style="position: fixed; top: 60px; left: 0; margin: 0; padding: 10px 20px; background: #1a1d2e; color: #e0e6f0; font-family: 'Inter', sans-serif; z-index: 9999; box-shadow: 2px 2px 8px #0009;">
+    <label for="modelChooser" style="font-weight: 600; margin-right: 8px;">Choose Model:</label>
+    <select id="modelChooser" onchange="switchModel(this.value)" style="padding: 6px 8px; border-radius: 4px; border: none; outline: none; background: #25304b; color: #e0e6f0;">
+      <option value="https://semiintelligence.pythonanywhere.com/model/model_6R">Bob 6R</option>
+      <option value="https://semiintelligence.pythonanywhere.com/model/model_50R">Alex 50R</option>
+    </select>
+  </div>
+
+  <!-- Chat UI -->
+  <div class="chat-container">
+    <div class="chat-header">SI Chat 🤖</div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <form id="chatForm" class="chat-input-area" autocomplete="off" onsubmit="handleSubmit(event)">
+      <input id="chatInput" class="chat-input" type="text" placeholder="Ask me anything..." required />
+      <button type="submit" class="send-btn">Send</button>
+    </form>
+  </div>
+
+  <!-- Name persistence script -->
+  <script>
+    const nameInput = document.getElementById('name');
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('name');
+      if (saved) nameInput.value = saved;
+    });
+    nameInput.addEventListener('input', () => {
+      localStorage.setItem('name', nameInput.value);
+    });
+    document.getElementById('chatInput').focus();
+  </script>
+</body>
+
+</html>
