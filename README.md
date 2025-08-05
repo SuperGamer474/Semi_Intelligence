@@ -28,8 +28,9 @@ Semi_Intelligence/
 ## 🚀 Get Started
 
 1. **Clone or download**
-2. Open `index.html` in your browser
-3. Start chatting with your mini AI ⚡
+2. Download a model from the releases section
+4. Open `index.html` in your browser
+5. Choose the model, and start chatting with your mini AI ⚡
 
 ---
 
