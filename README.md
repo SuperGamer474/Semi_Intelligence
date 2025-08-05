@@ -15,6 +15,14 @@ A JavaScript-based chatbot system built for speed, minimal footprint, and smart 
 
 ---
 
+## 💬 Models
+
+- Download models from the releases page to test Semi Intelligence!
+- The `R` in the models stands for `Responses`, which means how many topics it can respond to!
+- The more responses the smarter the SI model is.
+
+---
+
 ## 📁 File Structure
 ```
 Semi_Intelligence/
