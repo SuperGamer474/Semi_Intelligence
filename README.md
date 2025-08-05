@@ -28,9 +28,10 @@ Semi_Intelligence/
 ## 🚀 Get Started
 
 1. **Clone or download**
-2. Download a model from the releases section
-4. Open `index.html` in your browser
-5. Choose the model, and start chatting with your mini AI ⚡
+2. Download a model from the releases section into the same folder
+3. Start a local server (I recommend using `python -m http.server`)
+4. Open the local server in your browser
+5. Start chatting with your mini AI!
 
 ---
 
