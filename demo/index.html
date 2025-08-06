@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SI Chat</title>
+    <script type="module">
+      const base64 = 'bGV0IG1vZGVsSlNPTiA9IG51bGw7CmxldCBmdW5jdGlvbnMgPSB7fTsKbGV0IHBsYWNlaG9sZGVyQ2FjaGUgPSB7fTsKCi8vIExvYWQgYW5kIGNhY2hlIHRoZSBtb2RlbCBmcm9tIGEgSlNPTiBmaWxlIChkZWZhdWx0ICcuL21vZGVsLmpzb24nKQpleHBvcnQgYXN5bmMgZnVuY3Rpb24gbG9hZE1vZGVsKGZpbGVuYW1lID0gJy4vbW9kZWwuanNvbicpIHsKICBpZiAobW9kZWxKU09OICYmIG1vZGVsSlNPTi5fZmlsZW5hbWUgPT09IGZpbGVuYW1lKSB7CiAgICAvLyBBbHJlYWR5IGxvYWRlZCB0aGlzIG1vZGVsLCBqdXN0IHJldHVybiBpdAogICAgcmV0dXJuIG1vZGVsSlNPTjsKICB9CgogIGNvbnN0IHJlc3AgPSBhd2FpdCBmZXRjaChmaWxlbmFtZSk7CiAgbW9kZWxKU09OID0gYXdhaXQgcmVzcC5qc29uKCk7CiAgbW9kZWxKU09OLl9maWxlbmFtZSA9IGZpbGVuYW1lOyAvLyB0cmFjayB3aGljaCBmaWxlIGlzIGxvYWRlZAoKICAvLyBQYXJzZSBmdW5jdGlvbiBzdHJpbmdzIHRvIHJlYWwgSlMgZnVuY3Rpb25zCiAgZnVuY3Rpb25zID0ge307CiAgaWYgKG1vZGVsSlNPTi5mdW5jdGlvbnMpIHsKICAgIGZvciAoY29uc3QgZm5OYW1lIGluIG1vZGVsSlNPTi5mdW5jdGlvbnMpIHsKICAgICAgZnVuY3Rpb25zW2ZuTmFtZV0gPSBuZXcgRnVuY3Rpb24oJ3JldHVybiAnICsgbW9kZWxKU09OLmZ1bmN0aW9uc1tmbk5hbWVdKSgpOwogICAgfQogIH0KICByZXR1cm4gbW9kZWxKU09OOwp9CgovLyBSZXBsYWNlIHt7cGxhY2Vob2xkZXJzfX0gaW4gdGV4dCBieSBjYWxsaW5nIGNvcnJlc3BvbmRpbmcgY2FjaGVkIGZ1bmN0aW9ucwpmdW5jdGlvbiByZXBsYWNlUGxhY2Vob2xkZXJzKHRleHQpIHsKICByZXR1cm4gdGV4dC5yZXBsYWNlKC9ce1x7KFx3KylcfVx9L2csIChfLCBrZXkpID0+IHsKICAgIGlmIChmdW5jdGlvbnNba2V5XSkgewogICAgICAvLyBPbmx5IGNhY2hlICJzdGFibGUiIGZ1bmN0aW9ucyBsaWtlIG5hbWUsIHRpbWVPZkRheSBldGMuCiAgICAgIGlmIChbIm5hbWUiLCAidGltZU9mRGF5IiwgImN1cnJlbnRUaW1lIiwgImN1cnJlbnREYXRlIl0uaW5jbHVkZXMoa2V5KSkgewogICAgICAgIGlmICghKGtleSBpbiBwbGFjZWhvbGRlckNhY2hlKSkgewogICAgICAgICAgcGxhY2Vob2xkZXJDYWNoZVtrZXldID0gZnVuY3Rpb25zW2tleV0oKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIHBsYWNlaG9sZGVyQ2FjaGVba2V5XTsKICAgICAgfSBlbHNlIHsKICAgICAgICAvLyBGb3IgZHluYW1pYyBmdW5jdGlvbnMgbGlrZSByYW5kb21FbW9qaSwgYWx3YXlzIGNhbGwgZnJlc2gKICAgICAgICByZXR1cm4gZnVuY3Rpb25zW2tleV0oKTsKICAgICAgfQogICAgfQogICAgcmV0dXJuIGBgOyAvLyBmYWxsYmFjayBpZiB1bmtub3duIGZ1bmN0aW9uCiAgfSk7Cn0KCgovLyBDaGVjayBpZiBpbnB1dCBjb250YWlucyBhbnkga2V5d29yZCBvciBwaHJhc2UgZnJvbSBrZXl3b3JkcyBhcnJheQpmdW5jdGlvbiBjb250YWluc0FueShpbnB1dCwga2V5d29yZHMpIHsKICBjb25zdCBpbnB1dENsZWFuID0gaW5wdXQudG9Mb3dlckNhc2UoKS5yZXBsYWNlKC9bLiwhPzs6JyIoKXt9XFtcXS1dL2csICcgJyk7CiAgcmV0dXJuIGtleXdvcmRzLnNvbWUoa2V5d29yZCA9PiB7CiAgICBjb25zdCBlc2NhcGVkS2V5d29yZCA9IGtleXdvcmQucmVwbGFjZSgvWy4qKz9eJHt9KCl8W1xdXFxdL2csICdcXCQmJyk7CiAgICBpZiAoZXNjYXBlZEtleXdvcmQuaW5jbHVkZXMoJyAnKSkgewogICAgICAvLyBQaHJhc2UgY2hlY2sKICAgICAgcmV0dXJuIGlucHV0Q2xlYW4uaW5jbHVkZXMoZXNjYXBlZEtleXdvcmQudG9Mb3dlckNhc2UoKSk7CiAgICB9IGVsc2UgewogICAgICAvLyBTaW5nbGUgd29yZCBjaGVjayB3aXRoIHdvcmQgYm91bmRhcmllcwogICAgICBjb25zdCByZWdleCA9IG5ldyBSZWdFeHAoYFxcYiR7ZXNjYXBlZEtleXdvcmR9XFxiYCwgJ2knKTsKICAgICAgcmV0dXJuIHJlZ2V4LnRlc3QoaW5wdXRDbGVhbik7CiAgICB9CiAgfSk7Cn0KCi8vIEdldCByZXNwb25zZSBmcm9tIHRoZSBsb2FkZWQgbW9kZWwgdXNpbmcgdGhlIGlucHV0IHRleHQKLy8gVGhyb3dzIGVycm9yIGlmIG1vZGVsIG5vdCBsb2FkZWQgeWV0IQpleHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0X3NpX3Jlc3BvbnNlKGlucHV0KSB7CiAgaWYgKCFtb2RlbEpTT04pIHsKICAgIHJldHVybiAi8J+aqCBNb2RlbCBub3QgbG9hZGVkISIKICB9CgoKICBwbGFjZWhvbGRlckNhY2hlID0ge307IC8vIHJlc2V0IGNhY2hlIHBlciBjYWxsCiAgbGV0IG1hdGNoZWRSZXNwb25zZXMgPSBbXTsKCiAgLy8gMSkgRmluZCBhbGwgbWF0Y2hpbmcgcmVzcG9uc2UgdGVtcGxhdGVzCiAgZm9yIChjb25zdCBrZXl3b3JkU2V0IGluIG1vZGVsSlNPTi5yZXNwb25zZV9tYXApIHsKICAgIGNvbnN0IGtleXdvcmRzID0gbW9kZWxKU09OW2tleXdvcmRTZXRdOwogICAgaWYgKCFrZXl3b3JkcykgY29udGludWU7CiAgICBpZiAoY29udGFpbnNBbnkoaW5wdXQsIGtleXdvcmRzKSkgewogICAgICBjb25zdCByZXNwb25zZUtleSA9IG1vZGVsSlNPTi5yZXNwb25zZV9tYXBba2V5d29yZFNldF07CiAgICAgIGNvbnN0IHJlc3BvbnNlcyA9IG1vZGVsSlNPTltyZXNwb25zZUtleV07CiAgICAgIGlmIChyZXNwb25zZXMgJiYgcmVzcG9uc2VzLmxlbmd0aCA+IDApIHsKICAgICAgICBtYXRjaGVkUmVzcG9uc2VzLnB1c2goCiAgICAgICAgICByZXNwb25zZXNbTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogcmVzcG9uc2VzLmxlbmd0aCldCiAgICAgICAgKTsKICAgICAgfQogICAgfQogIH0KCiAgLy8gMikgRmFsbGJhY2sgaWYgbm8gbWF0Y2hlcwogIGlmIChtYXRjaGVkUmVzcG9uc2VzLmxlbmd0aCA9PT0gMCkgewogICAgY29uc3QgdW5zdXJlID0gbW9kZWxKU09OLnVuc3VyZV9yZXNwb25zZXMgfHwgWyJTb3JyeSwgSSBkaWRuJ3QgZ2V0IHRoYXQuIl07CiAgICByZXR1cm4gdW5zdXJlW01hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIHVuc3VyZS5sZW5ndGgpXTsKICB9CgogIC8vIDMpIFByb2Nlc3MgZWFjaCB0ZW1wbGF0ZTogcmVwbGFjZSBwbGFjZWhvbGRlcnMgKyBldmFsIHRlbXBsYXRlIGxpdGVyYWxzCiAgY29uc3QgcHJvY2Vzc2VkID0gbWF0Y2hlZFJlc3BvbnNlcy5tYXAocmF3UmVzcCA9PiB7CiAgICAvLyBhKSBSZXBsYWNlIHt7cGxhY2Vob2xkZXJzfX0KICAgIGNvbnN0IHdpdGhQbGFjZWhvbGRlcnMgPSByZXBsYWNlUGxhY2Vob2xkZXJzKHJhd1Jlc3ApOwoKICAgIC8vIGIpIEV2YWx1YXRlIGFueSBKUyBpbiBpdCB2aWEgdGVtcGxhdGUgbGl0ZXJhbCBldmFsCiAgICB0cnkgewogICAgICAvLyBFc2NhcGUgYmFja3RpY2tzIGJlZm9yZSB3cmFwcGluZwogICAgICBjb25zdCBzYWZlU3RyID0gd2l0aFBsYWNlaG9sZGVycy5yZXBsYWNlKC9gL2csICdcXGAnKTsKICAgICAgcmV0dXJuIG5ldyBGdW5jdGlvbigncmV0dXJuIGAnICsgc2FmZVN0ciArICdgJykoKTsKICAgIH0gY2F0Y2ggKGVycikgewogICAgICBjb25zb2xlLndhcm4oJ1RlbXBsYXRlIGV2YWwgZmFpbGVkOicsIGVycik7CiAgICAgIC8vIEZhbGwgYmFjayB0byBwbGFjZWhvbGRlci1vbmx5IHN0cmluZwogICAgICByZXR1cm4gd2l0aFBsYWNlaG9sZGVyczsKICAgIH0KICB9KTsKCiAgLy8gNCkgSm9pbiBhbmQgcmV0dXJuCiAgcmV0dXJuIHByb2Nlc3NlZC5qb2luKCJcbiIpOwp9Cg==';
+      const decoded = atob(base64);
+      const blob = new Blob([decoded], { type: 'application/javascript' });
+      const blobURL = URL.createObjectURL(blob);
+      const { loadModel, get_si_response } = await import(blobURL);
+      
+      let currentModelUrl = '';
+      async function listJsonFilesFromFolder(folder = './') {
+        const resp = await fetch(folder);
+        if (!resp.ok) throw new Error('Directory fetch failed');
+        const text = await resp.text();
+        return [...text.matchAll(/href="([^"]+\.json)"/g)].map(m => folder + m[1]);
+      }
+      async function initModelUI() {
+        const dropdown = document.getElementById('modelChooser');
+        dropdown.innerHTML = ' < option > Scanning… < /option>';
+        try {
+          const modelUrls = await listJsonFilesFromFolder('./');
+          dropdown.innerHTML = '';
+          if (modelUrls.length) {
+            modelUrls.forEach((url, i) => {
+              const name = url.split('/').pop().replace('.json', '');
+              const opt = document.createElement('option');
+              opt.value = url;
+              opt.textContent = name;
+              dropdown.appendChild(opt);
+            });
+            currentModelUrl = dropdown.value = modelUrls[0];
+            await loadModel(currentModelUrl);
+          } else {
+            dropdown.innerHTML = ' < option disabled > No models found < /option>';
+          }
+        } catch {
+          dropdown.innerHTML = ' < option disabled > Could not scan < /option>';
+        }
+        dropdown.onchange = async () => {
+          currentModelUrl = dropdown.value;
+          await loadModel(currentModelUrl);
+          addMessage('🛠️ Model switched!', 'bot');
+        };
+      }
+      window.handleSubmit = async (e) => {
+        e.preventDefault();
+        const input = document.getElementById('chatInput');
+        const txt = input.value.trim();
+        if (!txt) return;
+        addMessage(txt, 'user');
+        input.value = '';
+        setTimeout(async () => {
+          const resp = (await get_si_response(txt)).trim();
+          addMessage(resp, 'bot');
+        }, 300);
+      };
+
+      function addMessage(txt, sender) {
+        const msg = document.createElement('div');
+        msg.classList.add('message', sender);
+        msg.textContent = txt;
+        const c = document.getElementById('chatMessages');
+        c.appendChild(msg);
+        c.scrollTop = c.scrollHeight;
+      }
+      window.addEventListener('DOMContentLoaded', () => {
+        initModelUI();
+        const saved = localStorage.getItem('name');
+        if (saved) document.getElementById('name').value = saved;
+        document.getElementById('name').addEventListener('input', e => {
+          localStorage.setItem('name', e.target.value);
+        });
+        document.getElementById('chatInput').focus();
+      });
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #0f111a;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #e0e6f0;
+      }
+
+      .chat-container {
+        background: #1a1d2e;
+        width: 420px;
+        max-width: 90vw;
+        height: 80vh;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 30px #3f51b5aa;
+        overflow: hidden;
+        margin-top: 7vh;
+      }
+
+      .chat-header {
+        background: #2c3150;
+        padding: 20px;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: #8ab4f8;
+        text-align: center;
+        letter-spacing: 1.2px;
+        box-shadow: 0 2px 5px #0009 inset;
+      }
+
+      .chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .message {
+        max-width: 75%;
+        padding: 15px 18px;
+        border-radius: 20px;
+        font-size: 1rem;
+        line-height: 1.4;
+        white-space: pre-line;
+        word-wrap: break-word;
+      }
+
+      .user {
+        align-self: flex-end;
+        background: linear-gradient(135deg, #4f97ff, #6fbfff);
+        color: #fff;
+        border-bottom-right-radius: 2px;
+        box-shadow: 0 4px 10px #4f97ff88;
+        animation: slideInRight 0.3s ease forwards;
+      }
+
+      .bot {
+        align-self: flex-start;
+        background: #2b2f4a;
+        color: #a8b3d1;
+        border-bottom-left-radius: 2px;
+        box-shadow: 0 4px 10px #2b2f4aaa;
+        font-family: 'Courier New', monospace;
+        animation: slideInLeft 0.3s ease forwards;
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px)
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0)
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px)
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0)
+        }
+      }
+
+      .chat-input-area {
+        background: #2c3150;
+        padding: 15px 20px;
+        display: flex;
+        gap: 12px;
+      }
+
+      .chat-input {
+        flex: 1;
+        padding: 12px 18px;
+        font-size: 1rem;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        background: #1a1d2e;
+        color: #e0e6f0;
+      }
+
+      .chat-input::placeholder {
+        color: #8893b3;
+      }
+
+      .chat-input:focus {
+        background: #25304b;
+        box-shadow: 0 0 8px #4f97ffaa;
+      }
+
+      .send-btn {
+        background: #4f97ff;
+        border: none;
+        border-radius: 30px;
+        padding: 0 20px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 4px 15px #4f97ffbb;
+        transition: background-color 0.3s ease;
+      }
+
+      .send-btn:hover {
+        background: #6fbfff;
+        box-shadow: 0 6px 20px #6fbfffcc;
+      }
+
+      .send-btn:active {
+        background: #3e7ddb;
+      }
+
+      /* Name prompt */
+      #namePrompt {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        color: #fff;
+        padding: 12px 20px;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Model chooser */
+      #modelUI {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #1a1d2e;
+        padding: 10px 20px;
+        color: #e0e6f0;
+        box-shadow: -2px 2px 8px #0009;
+        font-family: 'Inter', sans-serif;
+      }
+
+      #modelChooser {
+        padding: 6px 8px;
+        border-radius: 4px;
+        background: #25304b;
+        color: #e0e6f0;
+        border: none;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="namePrompt">
+      <label for="name">What is your name:</label>
+      <input type="text" id="name" style="padding:6px 10px; border:none; border-radius:6px;" />
+    </div>
+    <div id="modelUI">
+      <label for="modelChooser">Choose Model:</label>
+      <select id="modelChooser"></select>
+    </div>
+    <div class="chat-container">
+      <div class="chat-header">SI Chat 🤖</div>
+      <div id="chatMessages" class="chat-messages"></div>
+      <form class="chat-input-area" onsubmit="handleSubmit(event)">
+        <input id="chatInput" class="chat-input" type="text" placeholder="Ask me anything..." required />
+        <button class="send-btn">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
