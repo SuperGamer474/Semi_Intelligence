@@ -52,6 +52,14 @@ Semi_Intelligence/
 
 ---
 
+## ⚠️ Important Warning
+
+**Semi Intelligence is JUST that — semi-intelligent!**  
+It’s super fast and lightweight, but it will often get stuff wrong or misunderstand you.  
+Use it for fun, learning, and simple chats — but don’t expect a perfect AI genius yet! 🤖💥
+
+---
+
 ## 🧙‍♂️ Created by
 
 **[SuperGamer474](https://supergamer474.rf.gd/home/)**
