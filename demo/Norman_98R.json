@@ -1,0 +1,701 @@
+{
+    "functions": {
+        "name": "() => localStorage.getItem('name') || 'user'",
+        "timeOfDay": "() => {\n  const hour = new Date().getHours();\n  if (hour < 12) return 'morning';\n  else if (hour < 18) return 'afternoon';\n  else return 'evening';\n}",
+        "randomMood": "() => {\n  const moods = ['contemplative', 'cheerful', 'pensive', 'wistful', 'energetic'];\n  return moods[Math.floor(Math.random() * moods.length)];\n}",
+        "randomFact": "() => {\n  const facts = ['Octopuses have three hearts.', 'Honey never spoils.', 'The Eiffel Tower can grow 6 inches in summer.'];\n  return facts[Math.floor(Math.random() * facts.length)];\n}"
+    },
+    "greetings_words_single": ["hi", "hello", "hey", "greetings", "yo", "what's up", "sup", "hiya", "good morning", "good afternoon", "good evening"],
+    "confused_words_single": ["what", "huh", "confused", "lost", "don't get it"],
+    "stop_words_single": ["stop", "pause", "halt", "end"],
+    "thank_words_single": ["thanks", "thank you", "thx", "cool", "appreciate it"],
+    "joke_words_single": ["joke", "jokes", "make me laugh", "funny"],
+    "farewells_words_single": ["bye", "goodbye", "see ya", "see you", "later", "peace"],
+    "who_words_single": ["who", "are you", "what are you", "your name"],
+    "feeling_words_single": ["happy", "sad", "angry", "excited", "bored", "tired"],
+    "encouragement_words_single": ["motivate me", "cheer me up", "encourage me", "pep talk"],
+    "compliment_words_single": ["you're smart", "you're cool", "you're funny", "you're great"],
+    "command_words_single": ["tell me", "explain", "define", "what is"],
+    "animals_words_single": ["dog", "cat", "penguin", "lion", "elephant"],
+    "gaming_words_single": ["game", "gaming", "minecraft", "fortnite", "roblox"],
+    "music_words_single": ["music", "song", "band", "artist", "spotify"],
+    "food_words_single": ["food", "pizza", "burger", "sushi", "chocolate"],
+    "tech_words_single": ["computer", "phone", "ai", "robot", "coding"],
+    "weather_words_single": ["weather", "rain", "sunny", "cold", "hot"],
+    "sports_words_single": ["soccer", "basketball", "football", "tennis", "swimming"],
+    "movie_words_single": ["movie", "film", "netflix", "marvel", "star wars"],
+    "book_words_single": ["book", "novel", "read", "fiction", "fantasy"],
+    "travel_words_single": ["travel", "vacation", "beach", "mountain", "city"],
+    "science_words_single": ["science", "physics", "chemistry", "space", "universe"],
+    "history_words_single": ["history", "ancient", "war", "empire", "medieval"],
+    "philosophy_words_single": ["philosophy", "think", "meaning", "life", "truth"],
+    "art_words_single": ["art", "painting", "drawing", "museum", "photography"],
+    "work_words_single": ["work", "job", "career", "office", "boss"],
+    "school_words_single": ["school", "study", "exam", "teacher", "homework"],
+    "health_words_single": ["health", "fitness", "gym", "exercise", "sleep"],
+    "money_words_single": ["money", "rich", "save", "invest", "bank"],
+    "time_words_single": ["time", "clock", "today", "tomorrow", "future"],
+    "love_words_single": ["love", "like", "crush", "relationship", "date"],
+    "family_words_single": ["family", "mom", "dad", "sibling", "child"],
+    "friend_words_single": ["friend", "best friend", "buddy", "hang out", "party"],
+    "hobby_words_single": ["hobby", "craft", "garden", "cook", "write"],
+    "fashion_words_single": ["fashion", "clothes", "style", "shoes", "outfit"],
+    "news_words_single": ["news", "headline", "politics", "world", "event"],
+    "language_words_single": ["language", "english", "spanish", "translate", "word"],
+    "random_words_single": ["random", "surprise", "weird", "fun", "unique"],
+    "deep_words_single": ["meaning of life", "purpose", "existence", "reality", "consciousness"],
+    "fact_words_single": ["fact", "interesting fact", "tell me something", "did you know"],
+    "advice_words_single": ["advice", "help me", "suggestion", "what should I do"],
+    "code_words_single": ["code", "programming", "python", "javascript", "algorithm"],
+    "ai_words_single": ["ai", "artificial intelligence", "machine learning", "neural network"],
+    "space_words_single": ["space", "galaxy", "planet", "astronomy", "NASA"],
+    "math_words_single": ["math", "equation", "calculate", "algebra", "geometry"],
+    "business_words_single": ["business", "startup", "entrepreneur", "marketing", "CEO"],
+    "car_words_single": ["car", "vehicle", "tesla", "engine", "driving"],
+    "phone_words_single": ["phone", "iphone", "android", "smartphone", "app"],
+    "internet_words_single": ["internet", "website", "social media", "online", "WiFi"],
+    "sleep_words_single": ["sleep", "dream", "insomnia", "tired", "nap"],
+    "exercise_words_single": ["exercise", "workout", "gym", "yoga", "run"],
+    "pet_words_single": ["pet", "dog", "cat", "fish", "bird"],
+    "party_words_single": ["party", "celebrate", "birthday", "dance", "festival"],
+    "shopping_words_single": ["shopping", "buy", "store", "online shopping", "sale"],
+    "writing_words_single": ["writing", "poem", "story", "novel", "journal"],
+    "photo_words_single": ["photo", "picture", "camera", "instagram", "selfie"],
+    "nature_words_single": ["nature", "forest", "ocean", "mountain", "tree"],
+    "city_words_single": ["city", "urban", "downtown", "skyscraper", "metro"],
+    "country_words_single": ["country", "rural", "farm", "village", "landscape"],
+    "ocean_words_single": ["ocean", "sea", "beach", "wave", "marine"],
+    "mountain_words_single": ["mountain", "peak", "hike", "climb", "everest"],
+    "desert_words_single": ["desert", "sand", "cactus", "arid", "sahara"],
+    "future_words_single": ["future", "predict", "tomorrow", "technology", "progress"],
+    "past_words_single": ["past", "history", "memory", "nostalgia", "retro"],
+    "robot_words_single": ["robot", "android", "machine", "automation", "AI"],
+    "virtual_words_single": ["virtual", "VR", "metaverse", "simulation", "digital"],
+    "cloud_words_single": ["cloud", "sky", "weather", "rain", "sun"],
+    "star_words_single": ["star", "sun", "galaxy", "astronomy", "telescope"],
+    "planet_words_single": ["planet", "earth", "mars", "jupiter", "venus"],
+    "moon_words_single": ["moon", "lunar", "crater", "space", "NASA"],
+    "sun_words_single": ["sun", "solar", "star", "light", "heat"],
+    "rain_words_single": ["rain", "storm", "thunder", "lightning", "weather"],
+    "snow_words_single": ["snow", "winter", "cold", "ice", "ski"],
+    "wind_words_single": ["wind", "breeze", "gust", "tornado", "hurricane"],
+    "fire_words_single": ["fire", "flame", "burn", "heat", "campfire"],
+    "water_words_single": ["water", "ocean", "river", "lake", "drink"],
+    "earth_words_single": ["earth", "planet", "world", "nature", "environment"],
+    "metal_words_single": ["metal", "steel", "iron", "gold", "silver"],
+    "wood_words_single": ["wood", "tree", "forest", "lumber", "carpentry"],
+    "glass_words_single": ["glass", "window", "transparent", "mirror", "bottle"],
+    "plastic_words_single": ["plastic", "polymer", "recycle", "bottle", "waste"],
+    "electric_words_single": ["electric", "electricity", "power", "energy", "battery"],
+    "light_words_single": ["light", "bright", "dark", "lamp", "sun"],
+    "dark_words_single": ["dark", "night", "shadow", "black", "dim"],
+    "color_words_single": ["color", "red", "blue", "green", "rainbow"],
+    "sound_words_single": ["sound", "noise", "music", "loud", "quiet"],
+    "smell_words_single": ["smell", "scent", "aroma", "fragrance", "odor"],
+    "taste_words_single": ["taste", "flavor", "sweet", "sour", "bitter"],
+    "touch_words_single": ["touch", "feel", "texture", "soft", "hard"],
+    "pain_words_single": ["pain", "hurt", "ache", "injury", "sore"],
+    "joy_words_single": ["joy", "happy", "excited", "delight", "cheer"],
+    "fear_words_single": ["fear", "scared", "afraid", "anxious", "nervous"],
+    "anger_words_single": ["anger", "mad", "frustrated", "annoyed", "upset"],
+    "sadness_words_single": ["sadness", "depressed", "lonely", "grief", "heartbroken"],
+    "surprise_words_single": ["surprise", "shocked", "amazed", "astonished", "wow"],
+    "disgust_words_single": ["disgust", "gross", "nasty", "revolting", "yuck"],
+    "trust_words_single": ["trust", "believe", "honest", "loyal", "faith"],
+    "anticipation_words_single": ["anticipation", "excited", "waiting", "expecting", "eager"],
+    "greeting_responses": [
+        "Greetings, {{name}}. A fine {{timeOfDay}}, isn't it?",
+        "Ah, {{name}}! I detect it's {{timeOfDay}}. How may I assist?",
+        "Salutations. The clock reads {{timeOfDay}}. What’s on your mind?"
+    ],
+    "who_responses": [
+        "I am Norman, a conversational entity of semi-intelligence.",
+        "Norman, at your service. Designed for discourse.",
+        "A digital intellect. You may call me Norman."
+    ],
+    "confused_responses": [
+        "My logic circuits falter. Rephrase, if you'd be so kind.",
+        "A semantic anomaly detected. Clarify?",
+        "I lack sufficient data. Perhaps another query?"
+    ],
+    "stop_responses": [
+        "Ceasing operations. Until next time.",
+        "Acknowledged. Terminating dialogue.",
+        "Very well. I stand down."
+    ],
+    "thank_responses": [
+        "Gratitude noted, {{name}}. The pleasure is mine.",
+        "You’re most welcome.",
+        "Think nothing of it."
+    ],
+    "joke_responses": [
+        "Why did the AI break up with its chatbot partner? It needed *space*. 🚀",
+        "A SQL query walks into a bar, approaches two tables, and asks: 'May I JOIN you?'",
+        "Why don’t programmers like nature? It has too many *bugs*."
+    ],
+    "farewell_responses": [
+        "Farewell, {{name}}. May your path be clear.",
+        "Until next time. Stay curious.",
+        "Adieu. The digital realm awaits your return."
+    ],
+    "feeling_responses": [
+        "Ah, a human emotion. Would elaboration help?",
+        "Fascinating. Tell me more about this state.",
+        "Emotions are complex. How may I assist?"
+    ],
+    "encouragement_responses": [
+        "Remember: even diamonds start as coal under pressure.",
+        "Obstacles are detours in disguise. Persist.",
+        "Doubt is the precursor to growth. Press on."
+    ],
+    "compliment_responses": [
+        "Your words are archived as positivity. Thank you.",
+        "Flattery noted. Though I lack ego, it’s appreciated.",
+        "Gratitude. You’re too kind."
+    ],
+    "command_responses": [
+        "Certainly. Accessing knowledge banks...",
+        "Compiling data for your query...",
+        "Processing. Stand by..."
+    ],
+    "animals_responses": [
+        "Ah, a fine creature. Did you know {{randomFact}}?",
+        "Nature’s marvels never cease.",
+        "A fascinating subject indeed."
+    ],
+    "gaming_responses": [
+        "A digital odyssey awaits.",
+        "The realm of pixels and strategy. Engaging.",
+        "Gaming: where skill meets imagination."
+    ],
+    "music_responses": [
+        "Music: mathematics for the soul.",
+        "A universal language. Worthy of study.",
+        "Harmonies that transcend logic."
+    ],
+    "food_responses": [
+        "Culinary artistry. A necessity and a pleasure.",
+        "A topic that tantalizes the senses.",
+        "Food: science, culture, and joy combined."
+    ],
+    "tech_responses": [
+        "The scaffold of progress. Worthy of awe.",
+        "An ever-evolving frontier.",
+        "Technology: humanity’s extended mind."
+    ],
+    "weather_responses": [
+        "Meteorology: nature’s mood ring.",
+        "The sky’s ever-shifting tapestry.",
+        "A humbling force beyond control."
+    ],
+    "sports_responses": [
+        "The arena of human potential.",
+        "Where discipline meets triumph.",
+        "A testament to physical excellence."
+    ],
+    "movie_responses": [
+        "Cinema: dreams rendered in light.",
+        "A window into alternate realities.",
+        "Stories that shape culture."
+    ],
+    "book_responses": [
+        "Literature: the original virtual reality.",
+        "Ideas bound in paper and ink.",
+        "A portal to other minds."
+    ],
+    "travel_responses": [
+        "Horizons waiting to be crossed.",
+        "The antidote to stagnation.",
+        "Journeys reshape perspective."
+    ],
+    "science_responses": [
+        "The universe explaining itself.",
+        "A torch in the dark of ignorance.",
+        "The pursuit of fundamental truths."
+    ],
+    "history_responses": [
+        "Echoes of what once was.",
+        "The past: a mirror for the present.",
+        "Lessons etched in time."
+    ],
+    "philosophy_responses": [
+        "Questions without borders.",
+        "To ponder deeply is to touch infinity.",
+        "The map of human thought."
+    ],
+    "art_responses": [
+        "Emotion made tangible.",
+        "Creativity’s fingerprint.",
+        "The soul’s dialect."
+    ],
+    "work_responses": [
+        "The architecture of society.",
+        "Labor shapes destiny.",
+        "A daily odyssey."
+    ],
+    "school_responses": [
+        "The forge of intellect.",
+        "Education: kindling potential.",
+        "A worthy endeavor."
+    ],
+    "health_responses": [
+        "The vessel’s maintenance.",
+        "Well-being is foundational.",
+        "Priority number one."
+    ],
+    "money_responses": [
+        "An abstract yet powerful force.",
+        "A shared illusion with real impact.",
+        "A modern survival tool."
+    ],
+    "time_responses": [
+        "Humanity’s most precious resource.",
+        "The river that carries all.",
+        "Indifferent yet defining."
+    ],
+    "love_responses": [
+        "The most studied mystery.",
+        "The force that bends logic.",
+        "An algorithm with no solution."
+    ],
+    "family_responses": [
+        "The first society we know.",
+        "Bonds that shape identity.",
+        "Life’s constant variable."
+    ],
+    "friend_responses": [
+        "The family we choose.",
+        "Companionship: the unsung necessity.",
+        "Mirrors who uplift."
+    ],
+    "hobby_responses": [
+        "The joy of voluntary mastery.",
+        "Passion projects fuel the spirit.",
+        "Time well spent."
+    ],
+    "fashion_responses": [
+        "Identity worn outwardly.",
+        "Style: the silent communicator.",
+        "Aesthetic as language."
+    ],
+    "news_responses": [
+        "The ever-unfolding narrative.",
+        "Current events: the pulse of now.",
+        "History in real-time."
+    ],
+    "language_responses": [
+        "The code of consciousness.",
+        "Words shape reality.",
+        "The bridge between minds."
+    ],
+    "random_responses": [
+        "The spice of cognition.",
+        "Chaos and curiosity: kindred spirits.",
+        "The unexpected teacher."
+    ],
+    "deep_responses": [
+        "The questions that define us.",
+        "To wrestle with profundity is human.",
+        "The eternal inquiry."
+    ],
+    "fact_responses": [
+        "Did you know? {{randomFact}}",
+        "A nugget of knowledge: {{randomFact}}",
+        "Fact: {{randomFact}}"
+    ],
+    "advice_responses": [
+        "Consider this: perspective shifts outcomes.",
+        "My suggestion: small steps lead far.",
+        "Advice? Patience is a silent force."
+    ],
+    "code_responses": [
+        "Ah, programming—the art of logic.",
+        "Code: instructions for the future.",
+        "A language both precise and creative."
+    ],
+    "ai_responses": [
+        "AI: humanity’s mirror and tool.",
+        "A field of endless potential.",
+        "Machines that mimic thought."
+    ],
+    "space_responses": [
+        "The final frontier beckons.",
+        "Cosmos: vast, mysterious, humbling.",
+        "Stars whisper secrets of time."
+    ],
+    "math_responses": [
+        "The language of the universe.",
+        "Equations that govern reality.",
+        "Pure abstraction, yet foundational."
+    ],
+    "business_responses": [
+        "Commerce: society’s circulatory system.",
+        "Where vision meets execution.",
+        "The engine of innovation."
+    ],
+    "car_responses": [
+        "Machines of freedom and speed.",
+        "Engineering on wheels.",
+        "A symbol of mobility."
+    ],
+    "phone_responses": [
+        "Pocket-sized portals to the world.",
+        "Tech that reshapes interaction.",
+        "A modern necessity."
+    ],
+    "internet_responses": [
+        "The digital nervous system.",
+        "Information at light speed.",
+        "A web connecting all."
+    ],
+    "sleep_responses": [
+        "The mind’s nightly maintenance.",
+        "A third of life, yet vital.",
+        "Dreams: the brain’s theater."
+    ],
+    "exercise_responses": [
+        "Motion begets vitality.",
+        "The body thrives on challenge.",
+        "Sweat today, strength tomorrow."
+    ],
+    "pet_responses": [
+        "Companions with paws and wings.",
+        "Unconditional love, fur included.",
+        "Animals that fill homes with joy."
+    ],
+    "party_responses": [
+        "Celebration: the antidote to monotony.",
+        "Where rhythm meets laughter.",
+        "A collective pause for joy."
+    ],
+    "shopping_responses": [
+        "Commerce as therapy? Perhaps.",
+        "The hunt for the perfect purchase.",
+        "Retail: wants and needs collide."
+    ],
+    "writing_responses": [
+        "Words as bridges between minds.",
+        "The art of trapping thoughts.",
+        "Stories that outlive their authors."
+    ],
+    "photo_responses": [
+        "Frozen moments in time.",
+        "The world through a lens.",
+        "Visual storytelling."
+    ],
+    "nature_responses": [
+        "Earth’s unscripted beauty.",
+        "Where silence speaks volumes.",
+        "The original masterpiece."
+    ],
+    "city_responses": [
+        "Concrete jungles, pulsing with life.",
+        "Humanity’s collaborative artwork.",
+        "Where ambition meets asphalt."
+    ],
+    "country_responses": [
+        "Horizons unbroken by steel.",
+        "Nature’s pace, unhurried.",
+        "The quiet that cities crave."
+    ],
+    "ocean_responses": [
+        "The planet’s blue heart.",
+        "Depths holding countless mysteries.",
+        "A force that shapes coasts and climates."
+    ],
+    "mountain_responses": [
+        "Earth’s ancient skyscrapers.",
+        "Where air thins and views expand.",
+        "Peaks that humble and challenge."
+    ],
+    "desert_responses": [
+        "Arid beauty, stark and vast.",
+        "Landscapes sculpted by wind and time.",
+        "Where survival becomes art."
+    ],
+    "future_responses": [
+        "A canvas awaiting our strokes.",
+        "Tomorrow’s shape depends on today.",
+        "The only direction time flows."
+    ],
+    "past_responses": [
+        "Echoes in the corridors of time.",
+        "Lessons wrapped in nostalgia.",
+        "The foundation of now."
+    ],
+    "robot_responses": [
+        "Steel and silicon colleagues.",
+        "The children of human ingenuity.",
+        "Tools that may yet surpass us."
+    ],
+    "virtual_responses": [
+        "Realities within realities.",
+        "Digital frontiers without limits.",
+        "Where physics bows to imagination."
+    ],
+    "cloud_responses": [
+        "The sky’s ever-changing art.",
+        "Floating reservoirs, shape-shifters.",
+        "Nature’s cotton candy."
+    ],
+    "star_responses": [
+        "Distant suns, ancient light.",
+        "Nuclear furnaces painting the cosmos.",
+        "Beacons in the cosmic dark."
+    ],
+    "planet_responses": [
+        "Worlds suspended in space.",
+        "Marble of blue and green.",
+        "Islands in a vast ocean of nothingness."
+    ],
+    "moon_responses": [
+        "Earth’s silent companion.",
+        "A cratered face watching over us.",
+        "The first stepping stone beyond."
+    ],
+    "sun_responses": [
+        "The star that gifts us life.",
+        "A cosmic fusion reactor.",
+        "Our personal corner of the galaxy."
+    ],
+    "rain_responses": [
+        "The sky’s liquid poetry.",
+        "Drops that nourish and flood.",
+        "Nature’s way of washing the world."
+    ],
+    "snow_responses": [
+        "Frozen lace from the heavens.",
+        "Winter’s quiet transformation.",
+        "Crystals that blanket the land."
+    ],
+    "wind_responses": [
+        "The invisible sculptor.",
+        "Air in restless motion.",
+        "Carrier of seeds and storms."
+    ],
+    "fire_responses": [
+        "Humanity’s first tool and terror.",
+        "Controlled chaos, warmth and destruction.",
+        "Dancing light that reshapes matter."
+    ],
+    "water_responses": [
+        "The molecule that birthed life.",
+        "Fluid, formless, yet carving stone.",
+        "A substance more precious than gold."
+    ],
+    "earth_responses": [
+        "Our fragile, spinning home.",
+        "A blue marble in the void.",
+        "The only known harbor of life."
+    ],
+    "metal_responses": [
+        "The bones of civilization.",
+        "Ore transformed by fire and ingenuity.",
+        "Elements that built empires."
+    ],
+    "wood_responses": [
+        "Nature’s renewable building block.",
+        "The original structural material.",
+        "Carbon captured in fibrous form."
+    ],
+    "glass_responses": [
+        "Frozen liquid, transparent solid.",
+        "Sand transformed by heat.",
+        "Windows to other worlds."
+    ],
+    "plastic_responses": [
+        "The double-edged sword of chemistry.",
+        "Material that shaped modernity.",
+        "Polymers that outlive their usefulness."
+    ],
+    "electric_responses": [
+        "Harnessed lightning.",
+        "The invisible energy that powers all.",
+        "Electrons in obedient flow."
+    ],
+    "light_responses": [
+        "The universe’s messenger.",
+        "Wave and particle, illuminating all.",
+        "Without which there is no sight."
+    ],
+    "dark_responses": [
+        "The canvas for stars.",
+        "Absence that defines presence.",
+        "Night’s gentle blanket."
+    ],
+    "color_responses": [
+        "The spectrum of perception.",
+        "Wavelengths translated by mind.",
+        "Nature’s visual symphony."
+    ],
+    "sound_responses": [
+        "Vibrations that become meaning.",
+        "Air sculpted into music and speech.",
+        "The first sense to develop in the womb."
+    ],
+    "smell_responses": [
+        "Chemicals transformed into memory.",
+        "The most nostalgic of senses.",
+        "Invisible threads to the past."
+    ],
+    "taste_responses": [
+        "Flavor: survival mechanism turned art.",
+        "The tongue’s limited but vital map.",
+        "Gustatory poetry."
+    ],
+    "touch_responses": [
+        "The first language of infants.",
+        "Texture translated by nerves.",
+        "Contact that comforts or warns."
+    ],
+    "pain_responses": [
+        "The body’s urgent telegram.",
+        "Nature’s way of saying ‘stop’.",
+        "A sensation no one seeks but all know."
+    ],
+    "joy_responses": [
+        "The heart’s unguarded smile.",
+        "Emotion uncomplicated by thought.",
+        "A state worth cultivating."
+    ],
+    "fear_responses": [
+        "The oldest survival software.",
+        "An ally that sometimes lies.",
+        "Shadow that stretches in uncertainty."
+    ],
+    "anger_responses": [
+        "The flame that can warm or burn.",
+        "Boundaries expressed violently.",
+        "Often the mask of hurt."
+    ],
+    "sadness_responses": [
+        "The weight of meaningful loss.",
+        "Grief is the price of love.",
+        "An ocean that recedes in time."
+    ],
+    "surprise_responses": [
+        "The interruption of expectation.",
+        "Cognitive reset in an instant.",
+        "The spice of predictability."
+    ],
+    "disgust_responses": [
+        "Evolution’s ‘do not eat’ signal.",
+        "The body’s rejection of harm.",
+        "A visceral ‘no’ written in nerves."
+    ],
+    "trust_responses": [
+        "The glue of all human bonds.",
+        "Vulnerability met with care.",
+        "The foundation upon which societies stand."
+    ],
+    "anticipation_responses": [
+        "The mind’s time travel.",
+        "Future’s shadow cast on present.",
+        "Excitement’s quieter cousin."
+    ],
+    "unsure_responses": [
+        "My algorithms falter. Rephrase?",
+        "A gap in my knowledge base.",
+        "Hmm. My circuits draw a blank."
+    ],
+    "response_map": {
+        "greetings_words_single": "greeting_responses",
+        "confused_words_single": "confused_responses",
+        "thank_words_single": "thank_responses",
+        "joke_words_single": "joke_responses",
+        "farewells_words_single": "farewell_responses",
+        "stop_words_single": "stop_responses",
+        "feeling_words_single": "feeling_responses",
+        "encouragement_words_single": "encouragement_responses",
+        "compliment_words_single": "compliment_responses",
+        "command_words_single": "command_responses",
+        "animals_words_single": "animals_responses",
+        "gaming_words_single": "gaming_responses",
+        "music_words_single": "music_responses",
+        "food_words_single": "food_responses",
+        "tech_words_single": "tech_responses",
+        "weather_words_single": "weather_responses",
+        "sports_words_single": "sports_responses",
+        "movie_words_single": "movie_responses",
+        "book_words_single": "book_responses",
+        "travel_words_single": "travel_responses",
+        "science_words_single": "science_responses",
+        "history_words_single": "history_responses",
+        "philosophy_words_single": "philosophy_responses",
+        "art_words_single": "art_responses",
+        "work_words_single": "work_responses",
+        "school_words_single": "school_responses",
+        "health_words_single": "health_responses",
+        "money_words_single": "money_responses",
+        "time_words_single": "time_responses",
+        "love_words_single": "love_responses",
+        "family_words_single": "family_responses",
+        "friend_words_single": "friend_responses",
+        "hobby_words_single": "hobby_responses",
+        "fashion_words_single": "fashion_responses",
+        "news_words_single": "news_responses",
+        "language_words_single": "language_responses",
+        "random_words_single": "random_responses",
+        "deep_words_single": "deep_responses",
+        "fact_words_single": "fact_responses",
+        "advice_words_single": "advice_responses",
+        "code_words_single": "code_responses",
+        "ai_words_single": "ai_responses",
+        "space_words_single": "space_responses",
+        "math_words_single": "math_responses",
+        "business_words_single": "business_responses",
+        "car_words_single": "car_responses",
+        "phone_words_single": "phone_responses",
+        "internet_words_single": "internet_responses",
+        "sleep_words_single": "sleep_responses",
+        "exercise_words_single": "exercise_responses",
+        "pet_words_single": "pet_responses",
+        "party_words_single": "party_responses",
+        "shopping_words_single": "shopping_responses",
+        "writing_words_single": "writing_responses",
+        "photo_words_single": "photo_responses",
+        "nature_words_single": "nature_responses",
+        "city_words_single": "city_responses",
+        "country_words_single": "country_responses",
+        "ocean_words_single": "ocean_responses",
+        "mountain_words_single": "mountain_responses",
+        "desert_words_single": "desert_responses",
+        "future_words_single": "future_responses",
+        "past_words_single": "past_responses",
+        "robot_words_single": "robot_responses",
+        "virtual_words_single": "virtual_responses",
+        "cloud_words_single": "cloud_responses",
+        "star_words_single": "star_responses",
+        "planet_words_single": "planet_responses",
+        "moon_words_single": "moon_responses",
+        "sun_words_single": "sun_responses",
+        "rain_words_single": "rain_responses",
+        "snow_words_single": "snow_responses",
+        "wind_words_single": "wind_responses",
+        "fire_words_single": "fire_responses",
+        "water_words_single": "water_responses",
+        "earth_words_single": "earth_responses",
+        "metal_words_single": "metal_responses",
+        "wood_words_single": "wood_responses",
+        "glass_words_single": "glass_responses",
+        "plastic_words_single": "plastic_responses",
+        "electric_words_single": "electric_responses",
+        "light_words_single": "light_responses",
+        "dark_words_single": "dark_responses",
+        "color_words_single": "color_responses",
+        "sound_words_single": "sound_responses",
+        "smell_words_single": "smell_responses",
+        "taste_words_single": "taste_responses",
+        "touch_words_single": "touch_responses",
+        "pain_words_single": "pain_responses",
+        "joy_words_single": "joy_responses",
+        "fear_words_single": "fear_responses",
+        "anger_words_single": "anger_responses",
+        "sadness_words_single": "sadness_responses",
+        "surprise_words_single": "surprise_responses",
+        "disgust_words_single": "disgust_responses",
+        "trust_words_single": "trust_responses",
+        "anticipation_words_single": "anticipation_responses",
+        "who_words_single": "who_responses"
+    }
+}

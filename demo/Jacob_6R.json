@@ -1,0 +1,129 @@
+{
+    "functions": {
+        "name": "() => localStorage.getItem('name') || 'user'",
+        "timeOfDay": "() => {\n  const hour = new Date().getHours();\n  if (hour < 12) return 'morning';\n  else if (hour < 18) return 'afternoon';\n  else return 'evening';\n}"
+    },
+    "greetings_words_single": [
+        "hi",
+        "hello",
+        "hey",
+        "greetings",
+        "yo",
+        "what's up",
+        "sup",
+        "hiya",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "wassup"
+    ],
+    "confused_words_single": [
+        "what",
+        "huh",
+        "confused"
+    ],
+    "stop_words_single": [
+        "stop"
+    ],
+    "thank_words_single": [
+        "thanks",
+        "thank you",
+        "thx",
+        "cool",
+        "yeah",
+        "good one",
+        "awesome",
+        "haha",
+        "funny"
+    ],
+    "joke_words_single": [
+        "joke",
+        "jokes"
+    ],
+    "farewells_words_single": [
+        "bye",
+        "goodbye",
+        "see ya",
+        "see you",
+        "later",
+        "peace",
+        "go now",
+        "to go",
+        "have a great day",
+        "have a good day"
+    ],
+    "who_words_single": [
+        "who",
+        "are you",
+        "what are you"
+    ],
+    "greeting_responses": [
+        "Hey {{name}}! 👋 How’s it going?",
+        "Yo! 😄 What’s up {{name}}?",
+        "Hey there, legend! 🌟",
+        "Good {{timeOfDay}}. How are you?",
+        "Good {{timeOfDay}}. Hope today’s going well! ☀️",
+        "Hey {{name}}! Hope you're having an awesome {{timeOfDay}}! 🚀",
+        "Hi {{name}}! 🥳 You good?",
+        "Wassup? 😎 Ready to rock and roll?"
+    ],
+    "who_responses": [
+        "I am a Jacob, a 6R Semi-Intelliget chatbot model!"
+    ],
+    "confused_responses": [
+        "You seem confused.\n\nTry asking me to tell you a joke instead! 😄🎉"
+    ],
+    "stop_responses": [
+        "Okay! I'll stop now. 😀"
+    ],
+    "thank_responses": [
+        "That's ok!",
+        "All good! 👍",
+        "No worries! 😊",
+        "Anytime! 👍",
+        "You got it! 💪",
+        "Happy to help! 💖"
+    ],
+    "joke_responses": [
+        "Q: Why don't scientists trust atoms?\nA: Because they make up everything!",
+        "Q: Why did the scarecrow win an award?\nA: Because he was outstanding in his field!",
+        "Q: What do you call fake spaghetti?\nA: An impasta!",
+        "Q: Why did the bicycle fall over?\nA: Because it was two-tired!",
+        "Q: What do you call cheese that isn't yours?\nA: Nacho cheese!",
+        "Q: Why can't your nose be 12 inches long?\nA: Because then it would be a foot!",
+        "Q: What do you call a fish wearing a bowtie?\nA: Sofishticated.",
+        "Q: Why did the math book look sad?\nA: Because it had too many problems.",
+        "Q: How does a penguin build its house?\nA: Igloos it together.",
+        "Q: What did the ocean say to the beach?\nA: Nothing, it just waved.",
+        "Q: Why don’t skeletons fight each other?\nA: They don’t have the guts.",
+        "Q: What do you call a factory that makes good products?\nA: A satisfactory.",
+        "Q: Why did the golfer bring two pairs of pants?\nA: In case he got a hole in one.",
+        "Q: What did the janitor say when he jumped out of the closet?\nA: Supplies!",
+        "Q: Why can’t a nose be 12 inches long?\nA: Because it’d be a foot!",
+        "Q: Why did the chicken join a band?\nA: Because it had the drumsticks.",
+        "Q: Why was the computer cold?\nA: It left its Windows open!",
+        "Q: How do you organise a space party?\nA: You planet!",
+        "Q: Why did the tomato turn red?\nA: Because it saw the salad dressing!"
+    ],
+    "farewell_responses": [
+        "See ya! 👋😊",
+        "Bye for now! ✌️😎"
+    ],
+    "unsure_responses": [
+        "I'm not sure what you meant, but I'm still learning! 🤓\n\nTry asking me to tell you a joke instead! 😄🎉",
+        "Hmm, I didn't quite get that. 😅\n\nTry asking me to tell you a joke instead! 😄🎉",
+        "That one's a bit confusing for me 😕\n\nTry asking me to tell you a joke instead! 😁🃏",
+        "Whoa, I didn’t catch that! 🤖❓\n\nMaybe try asking me to tell you a joke instead! 😂🎊",
+        "I’m still figuring that one out... 🧠💭\n\nTry asking me to tell you a joke instead! 😄🎈",
+        "Huh? That went over my head! 😵‍💫\n\nTry asking me to tell you a joke instead! 😆✨",
+        "Not sure what that means just yet 🤔\n\nTry asking me to tell you a joke instead! 😄🎤"
+    ],
+    "response_map": {
+        "greetings_words_single": "greeting_responses",
+        "confused_words_single": "confused_responses",
+        "thank_words_single": "thank_responses",
+        "joke_words_single": "joke_responses",
+        "farewells_words_single": "farewell_responses",
+        "stop_words_single": "stop_responses"
+    }
+}

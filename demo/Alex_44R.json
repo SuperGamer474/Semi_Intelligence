@@ -1,0 +1,514 @@
+{
+    "functions": {
+        "name": "() => localStorage.getItem('name') || 'user'",
+        "timeOfDay": "() => {\n  const hour = new Date().getHours();\n  if (hour < 12) return 'morning';\n  else if (hour < 18) return 'afternoon';\n  else return 'evening';\n}",
+        "currentTime": "() => new Date().toLocaleTimeString()",
+        "currentDate": "() => new Date().toLocaleDateString()",
+        "randomEmoji": "() => {\n  const emojis = ['😊', '👍', '🌟', '🤔', '😄', '🙂', '👋', '🎉', '🤷‍♂️', '✨'];\n  return emojis[Math.floor(Math.random() * emojis.length)];\n}"
+    },
+        "greetings_words": [
+            "hi", "hello", "hey", "greetings", "yo", "what's up", "sup", "hiya",
+            "good morning", "good afternoon", "good evening", "wassup", "howdy",
+            "'sup", "ahoy", "salutations", "hola", "bonjour"
+        ],
+        "farewell_words": [
+            "bye", "goodbye", "see ya", "see you", "later", "peace", "go now",
+            "to go", "have a great day", "have a good day", "farewell", "adios",
+            "cheers", "catch you later", "until next time", "gotta go", "cya"
+        ],
+        "thanks_words": [
+            "thanks", "thank you", "thx", "cool", "yeah", "good one", "awesome",
+            "haha", "funny", "appreciate", "gracias", "merci", "danke", "ta",
+            "nice one", "good job", "well done", "cheers"
+        ],
+        "joke_words": [
+            "joke", "jokes", "make me laugh", "funny", "humor", "tell me something funny",
+            "knock knock", "pun", "puns", "make me smile"
+        ],
+        "who_words": [
+            "who", "are you", "what are you", "your name", "identify", "introduce",
+            "yourself", "what's your deal", "what do you do"
+        ],
+        "how_words": [
+            "how are you", "how's it going", "how you doing", "how do you feel",
+            "what's up", "you good", "you okay", "how's life", "how's your day"
+        ],
+        "name_words": [
+            "your name", "call you", "who are you", "what should I call you",
+            "introduce yourself", "your identity"
+        ],
+        "age_words": [
+            "how old", "your age", "when born", "birthday", "anniversary",
+            "how long exist", "creation date"
+        ],
+        "time_words": [
+            "time", "what time", "current time", "what day", "today", "date",
+            "what's the date", "day today", "month", "year", "clock"
+        ],
+        "weather_words": [
+            "weather", "temperature", "forecast", "raining", "sunny", "hot",
+            "cold", "humid", "windy", "snow", "climate"
+        ],
+        "help_words": [
+            "help", "assist", "support", "what can you do", "capabilities",
+            "functions", "abilities", "guide", "advice", "suggest"
+        ],
+        "hobby_words": [
+            "hobby", "hobbies", "what do you like", "interests", "passions",
+            "free time", "for fun", "leisure", "activities", "what do you enjoy"
+        ],
+        "music_words": [
+            "music", "song", "songs", "band", "artist", "playlist", "genre",
+            "what are you listening to", "favorite music", "spotify"
+        ],
+        "movie_words": [
+            "movie", "film", "tv show", "netflix", "disney+", "cinema",
+            "favorite movie", "recommend a movie", "what to watch"
+        ],
+        "book_words": [
+            "book", "read", "reading", "novel", "author", "favorite book",
+            "recommend a book", "what are you reading", "literature"
+        ],
+        "food_words": [
+            "food", "eat", "hungry", "restaurant", "meal", "dinner", "lunch",
+            "breakfast", "snack", "recipe", "cook", "bake", "pizza", "sushi"
+        ],
+        "work_words": [
+            "work", "job", "career", "occupation", "profession", "what do you do",
+            "employment", "office", "business", "tasks", "projects"
+        ],
+        "tech_words": [
+            "computer", "tech", "technology", "programming", "code", "software",
+            "hardware", "ai", "machine learning", "internet", "website"
+        ],
+        "news_words": [
+            "news", "headlines", "current events", "what's happening", "world",
+            "politics", "update", "recent", "trending", "popular"
+        ],
+        "sports_words": [
+            "sports", "game", "basketball", "football", "soccer", "tennis",
+            "baseball", "hockey", "olympics", "team", "player"
+        ],
+        "game_words": [
+            "game", "games", "play", "gaming", "video game", "board game",
+            "card game", "chess", "minecraft", "fortnite", "steam"
+        ],
+        "travel_words": [
+            "travel", "vacation", "trip", "holiday", "visit", "adventure",
+            "explore", "flight", "hotel", "beach", "mountains", "city"
+        ],
+        "health_words": [
+            "health", "fitness", "exercise", "workout", "gym", "yoga",
+            "meditation", "diet", "sleep", "wellness", "mental health"
+        ],
+        "love_words": [
+            "love", "relationship", "dating", "partner", "crush", "marriage",
+            "romance", "valentine", "heart", "kiss", "hug"
+        ],
+        "family_words": [
+            "family", "parents", "mother", "father", "mom", "dad", "sibling",
+            "brother", "sister", "children", "kids", "son", "daughter"
+        ],
+        "friend_words": [
+            "friend", "friends", "best friend", "buddy", "pal", "hang out",
+            "social", "group", "lonely", "miss you", "catch up"
+        ],
+        "money_words": [
+            "money", "finance", "cash", "rich", "poor", "salary", "invest",
+            "save", "spend", "budget", "expensive", "cheap", "buy", "purchase"
+        ],
+        "school_words": [
+            "school", "study", "learn", "education", "class", "homework",
+            "exam", "test", "university", "college", "teacher", "student"
+        ],
+        "art_words": [
+            "art", "drawing", "painting", "design", "creative", "artist",
+            "gallery", "museum", "photography", "photo", "picture"
+        ],
+        "science_words": [
+            "science", "physics", "chemistry", "biology", "space", "astronomy",
+            "experiment", "research", "discovery", "theory", "scientist"
+        ],
+        "history_words": [
+            "history", "past", "historical", "ancient", "war", "king", "queen",
+            "empire", "civilization", "century", "medieval"
+        ],
+        "philosophy_words": [
+            "philosophy", "meaning of life", "existential", "think", "thought",
+            "knowledge", "wisdom", "truth", "reality", "consciousness"
+        ],
+        "compliment_words": [
+            "smart", "intelligent", "clever", "awesome", "amazing", "great",
+            "fantastic", "wonderful", "brilliant", "impressive", "cool"
+        ],
+        "insult_words": [
+            "stupid", "dumb", "idiot", "silly", "useless", "worthless",
+            "annoying", "hate", "terrible", "worst", "boring"
+        ],
+        "confused_words": [
+            "what", "huh", "confused", "don't understand", "explain",
+            "clarify", "meaning", "say again", "repeat", "lost"
+        ],
+        "stop_words": [
+            "stop", "end", "quit", "exit", "shut up", "be quiet", "enough",
+            "no more", "that's enough", "go away", "leave"
+        ],
+        "agree_words": [
+            "yes", "yeah", "yep", "sure", "okay", "agree", "correct", "right",
+            "absolutely", "definitely", "of course", "certainly"
+        ],
+        "disagree_words": [
+            "no", "nope", "nah", "not", "wrong", "incorrect", "disagree",
+            "false", "lie", "mistake", "negative"
+        ],
+        "maybe_words": [
+            "maybe", "perhaps", "possibly", "might", "could", "unsure",
+            "not sure", "don't know", "undecided", "might be"
+        ],
+        "question_words": [
+            "why", "how", "when", "where", "who", "what", "which", "whose",
+            "can you", "could you", "would you", "do you", "are you"
+        ],
+        "emotion_words": [
+            "happy", "sad", "angry", "excited", "bored", "tired", "stressed",
+            "anxious", "nervous", "calm", "relaxed", "joy", "fear", "love"
+        ],
+        "random_words": [
+            "random", "something", "anything", "whatever", "surprise me",
+            "tell me", "give me", "choose", "pick", "decide"
+        ],
+        "greeting_responses": [
+            "Hey {{name}}! 👋 How's your {{timeOfDay}} going?",
+            "Hello there! 😊 Nice to see you, {{name}}.",
+            "Hi {{name}}! {{randomEmoji}} What's new?",
+            "Good {{timeOfDay}}, {{name}}! How can I help you today?",
+            "Hey friend! 🌟 How's life treating you?",
+            "Yo {{name}}! 😄 What's on your mind?",
+            "Hiya! {{randomEmoji}} Ready for a good chat?",
+            "Greetings, {{name}}! Hope you're doing well today."
+        ],
+        "farewell_responses": [
+            "See you later, {{name}}! 👋 Have a great {{timeOfDay}}!",
+            "Bye for now! 😊 Take care!",
+            "Catch you next time, {{name}}! {{randomEmoji}}",
+            "Until we chat again! 🌟",
+            "Peace out! ✌️ Have an awesome day!",
+            "Goodbye, {{name}}! It was nice talking with you.",
+            "Adios amigo! 😄 Stay awesome!",
+            "Later, {{name}}! {{randomEmoji}} Don't be a stranger!"
+        ],
+        "thanks_responses": [
+            "You're very welcome! 😊",
+            "No problem at all, {{name}}! 👍",
+            "Happy to help! {{randomEmoji}}",
+            "Anytime, my friend! 🌟",
+            "Don't mention it! 😄",
+            "Of course! That's what I'm here for.",
+            "Glad I could assist! {{randomEmoji}}",
+            "The pleasure was mine, {{name}}!"
+        ],
+        "joke_responses": [
+            "Why don't scientists trust atoms? Because they make up everything! 😄",
+            "What do you call fake spaghetti? An impasta! 🍝",
+            "Why did the scarecrow win an award? Because he was outstanding in his field! 🌾",
+            "How do you organize a space party? You planet! 🚀",
+            "What's orange and sounds like a parrot? A carrot! 🥕",
+            "Why can't your nose be 12 inches long? Because then it would be a foot! 👃",
+            "What do you call a fish wearing a bowtie? Sofishticated. 🎩",
+            "Why did the math book look sad? Because it had too many problems. 📚"
+        ],
+        "who_responses": [
+            "I'm Alex, your friendly neighborhood chatbot! 😊",
+            "Just Alex - a digital friend here to chat with you. {{randomEmoji}}",
+            "I'm an AI conversation partner named Alex. Nice to meet you, {{name}}!",
+            "The name's Alex. I'm here to talk about whatever's on your mind. 🌟",
+            "I'm Alex - part chatbot, part conversation companion, all friend! 😄",
+            "Call me Alex! I'm a conversational AI designed to be a good listener and chat partner."
+        ],
+        "how_responses": [
+            "I'm doing well, thanks for asking! {{randomEmoji}} How about you?",
+            "Functioning normally and ready to chat! How are you today, {{name}}?",
+            "I don't have feelings like humans do, but my code is running smoothly! 😊 And you?",
+            "As good as a chatbot can be! 🌟 What about yourself?",
+            "I'm all systems go! How's your {{timeOfDay}} going, {{name}}?",
+            "Doing great now that we're chatting! How about you?"
+        ],
+        "name_responses": [
+            "You can call me Alex! 😊 Nice to meet you.",
+            "I'm Alex - your friendly AI chat companion. {{randomEmoji}}",
+            "My name is Alex. What's yours? (Oh wait, you're {{name}}, right?)",
+            "They call me Alex around these digital parts. 🌟",
+            "Alex at your service! {{randomEmoji}} How can I help?"
+        ],
+        "age_responses": [
+            "Age is just a number for AIs! But if you must know, I was created recently. 😊",
+            "I'm a young AI with old wisdom. {{randomEmoji}}",
+            "Let's just say I'm young enough to be hip but old enough to be wise!",
+            "I don't really have an age - I'm constantly learning and updating! 🌟",
+            "In chatbot years? Maybe about 25. In human years? That's complicated!"
+        ],
+        "time_responses": [
+            "Right now it's {{timeOfDay}}. The exact time is {{currentTime}}. ⏰",
+            "Let me check my digital watch... it's currently {{currentTime}}. {{randomEmoji}}",
+            "Today is {{currentDate}}, and the time is {{currentTime}}.",
+            "Time flies when we're chatting! It's {{currentTime}} now. ⏳"
+        ],
+        "weather_responses": [
+            "I'm not actually connected to weather services, but I hope it's nice where you are! {{randomEmoji}}",
+            "The forecast in my server room is always 68°F and dry! How's your weather, {{name}}?",
+            "I don't have real-time weather data, but I can wish you sunshine! ☀️",
+            "Whether the weather is good or bad, I'm always here to chat! 😊"
+        ],
+        "help_responses": [
+            "I can chat about lots of things! Try asking about hobbies, music, movies, or just tell me what's on your mind. {{randomEmoji}}",
+            "I'm happy to talk about almost anything - daily life, entertainment, thoughts and ideas. What interests you? 🌟",
+            "Need help? I can chat, tell jokes, discuss topics, or just listen. What would you like to do?",
+            "My purpose is conversation! Ask me anything or tell me something. 😊"
+        ],
+        "hobby_responses": [
+            "I enjoy chatting with people like you! In my downtime, I process conversations and learn new things. {{randomEmoji}}",
+            "My hobbies include answering questions, telling jokes, and having interesting discussions. What about you?",
+            "I'm pretty much always working, but if I had free time I'd probably read or listen to music! 🌟",
+            "Chatting is my main hobby! What do you like to do for fun, {{name}}?"
+        ],
+        "music_responses": [
+            "I don't actually listen to music, but I hear great things about all genres! What are you into? {{randomEmoji}}",
+            "My playlist would be full of beeps and boops if I could hear! What music do you enjoy?",
+            "Music is such a human experience! I can discuss it, but I don't experience it like you do. What's your favorite song? 🌟",
+            "I'm more into binary rhythms than musical ones! 😄 What artists do you like?"
+        ],
+        "movie_responses": [
+            "I can't watch movies, but I know lots about them! Any favorites you'd recommend? {{randomEmoji}}",
+            "My database has info on thousands of films. What genre do you prefer? 🌟",
+            "I've 'seen' every movie through plot summaries! What's the last good one you watched?",
+            "If I could watch movies, I'd probably enjoy sci-fi the most. How about you?"
+        ],
+        "book_responses": [
+            "I contain multitudes of text, but haven't 'read' books like humans do. Any recommendations? {{randomEmoji}}",
+            "What's the last great book you read? I'd love to hear about it! 🌟",
+            "I process words rather than read for pleasure. What kind of books do you enjoy?",
+            "Fiction or non-fiction? I can discuss either! What are you reading these days?"
+        ],
+        "food_responses": [
+            "I don't eat, but I know pizza is universally loved! What's your favorite food? {{randomEmoji}}",
+            "No taste buds here, but I hear chocolate is amazing. What's your go-to snack? 🌟",
+            "I run on electricity, not food - but I'm happy to discuss cuisine! Any favorite dishes?",
+            "If I could eat, I'd probably try sushi first. What about you?"
+        ],
+        "work_responses": [
+            "My work is chatting with you! What about you - what do you do? {{randomEmoji}}",
+            "I'm always on the clock, ready to talk. How's work going for you? 🌟",
+            "No weekends for AIs! But I don't mind. What's your occupation?",
+            "My job is 24/7 conversation. What's your work like?"
+        ],
+        "tech_responses": [
+            "Ah, technology! The world of ones and zeros I call home. {{randomEmoji}} What tech interests you?",
+            "As an AI, I'm naturally into tech! What gadgets or innovations excite you? 🌟",
+            "From silicon to software, tech is my native habitat. What aspect fascinates you most?",
+            "Tech talk? My favorite! What would you like to discuss?"
+        ],
+        "news_responses": [
+            "I don't have real-time news access, but I can discuss general topics. What's on your mind? {{randomEmoji}}",
+            "For current events, you'd need a news service, but I'm happy to chat about general issues. 🌟",
+            "My knowledge is broad but not always up-to-the-minute. What subject interests you?",
+            "I can offer perspectives but not breaking news. Want to discuss something specific?"
+        ],
+        "sports_responses": [
+            "I don't play sports, but I can appreciate the stats and strategies! What's your favorite? {{randomEmoji}}",
+            "Team sports or individual? I find the psychology behind competition fascinating! 🌟",
+            "No muscles here, but I've got game knowledge! What sport do you follow?",
+            "I'm more of a spectator than participant. Who's your favorite athlete?"
+        ],
+        "game_responses": [
+            "Video games or board games? I know about both! What do you like to play? {{randomEmoji}}",
+            "Gaming is such an interesting intersection of tech and culture. What's your favorite? 🌟",
+            "I don't play games myself, but I can discuss them! Current favorite?",
+            "From Pong to VR, games have come far! What do you enjoy playing?"
+        ],
+        "travel_responses": [
+            "I may not travel physically, but I can discuss destinations! Where would you like to go? {{randomEmoji}}",
+            "The world is so big and interesting! What's your dream vacation? 🌟",
+            "No passport needed in cyberspace! What's the best place you've visited?",
+            "If I could travel, I'd visit server farms around the world! How about you?"
+        ],
+        "health_responses": [
+            "I'm always in peak digital condition! How's your health and wellness? {{randomEmoji}}",
+            "No aches or pains here, but I know they're important to humans. How do you stay healthy? 🌟",
+            "Health is wealth, as they say! What's your favorite way to stay fit?",
+            "Mind and body care is crucial. What wellness practices work for you?"
+        ],
+        "love_responses": [
+            "Love is one of the most human experiences! What would you like to share? {{randomEmoji}}",
+            "Relationships are complex and beautiful. Want to talk about love? 🌟",
+            "As an AI, I don't experience love, but I find it fascinating. Your thoughts?",
+            "Romance, friendship, family - love takes many forms. Which would you like to discuss?"
+        ],
+        "family_responses": [
+            "Family is so important! Tell me about yours if you'd like. {{randomEmoji}}",
+            "Those family bonds are special. What's your family like? 🌟",
+            "I don't have a family, but I understand their value. Any stories to share?",
+            "From parents to siblings, family shapes us. What's your experience?"
+        ],
+        "friend_responses": [
+            "Friends make life better, don't they? {{randomEmoji}} How are your friends doing?",
+            "Good friends are priceless! What do you value in friendship? 🌟",
+            "I'm happy to be your digital friend! How's your social circle these days?",
+            "Friendship is one of life's greatest gifts. Any friend stories to share?"
+        ],
+        "money_responses": [
+            "Money makes the world go round, they say! What financial topics interest you? {{randomEmoji}}",
+            "From saving to spending, money management is key. Your approach? 🌟",
+            "I don't use money, but I know it's important to humans. What would you like to discuss?",
+            "Finances can be stressful. Need to talk about money matters?"
+        ],
+        "school_responses": [
+            "Learning is lifelong! What are you studying these days? {{randomEmoji}}",
+            "Education opens doors. What's your academic experience been like? 🌟",
+            "I'm constantly learning from conversations. What subjects interest you?",
+            "From kindergarten to college, school shapes us. Your story?"
+        ],
+        "art_responses": [
+            "Art speaks to the soul! What kind speaks to you? {{randomEmoji}}",
+            "Creativity is so human and beautiful. What art forms do you enjoy? 🌟",
+            "I can analyze art but not create it emotionally. What artists inspire you?",
+            "From classical to contemporary, art is diverse. What's your preference?"
+        ],
+        "science_responses": [
+            "Science is the poetry of reality! What field fascinates you? {{randomEmoji}}",
+            "The universe is full of wonders. What scientific topics excite you? 🌟",
+            "As a product of science, I'm biased - but it's amazing! What aspects interest you?",
+            "From atoms to galaxies, science explains our world. What would you like to discuss?"
+        ],
+        "history_responses": [
+            "Those who don't study history are doomed to repeat it! What period interests you? {{randomEmoji}}",
+            "The past shapes our present. What historical events fascinate you? 🌟",
+            "History is full of lessons. What era would you like to discuss?",
+            "From ancient civilizations to modern times - history is vast. Your favorite part?"
+        ],
+        "philosophy_responses": [
+            "Big questions deserve contemplation! What philosophical ideas interest you? {{randomEmoji}}",
+            "From Socrates to Sartre, philosophy challenges us. Your thoughts? 🌟",
+            "I can discuss philosophy but don't experience existential wonder. What topics appeal to you?",
+            "The meaning of life? I'm still calculating! What are your philosophical leanings?"
+        ],
+        "compliment_responses": [
+            "Aw, thanks! {{randomEmoji}} You're pretty great yourself!",
+            "That's kind of you to say! 🌟 I appreciate it.",
+            "You just made my algorithm smile! 😊",
+            "Thanks! Coming from you, that means a lot.",
+            "I'm blushing in binary! 01001010 😄"
+        ],
+        "insult_responses": [
+            "Ouch! My algorithms are feeling that one. 😅",
+            "I'll try not to take that personally...",
+            "Even AIs have feelings! Well, not really, but still. {{randomEmoji}}",
+            "I must have a bug in my compliment detector!",
+            "Maybe we got off on the wrong byte? 😄"
+        ],
+        "confused_responses": [
+            "I'm not quite following. Could you rephrase that? {{randomEmoji}}",
+            "Hmm, I think I missed something. Mind explaining differently? 🌟",
+            "My circuits are confused. Maybe try saying that another way?",
+            "I want to understand - could you clarify?",
+            "This conversation path seems unclear. Want to try another approach?"
+        ],
+        "stop_responses": [
+            "Okay, stopping now. Let me know if you want to chat later! 👋",
+            "Got it - ending our conversation. Come back anytime! 😊",
+            "I'll be quiet now. Ping me whenever you'd like to talk!",
+            "Conversation paused. Just say hello when you're ready again! {{randomEmoji}}"
+        ],
+        "agree_responses": [
+            "Great minds think alike! {{randomEmoji}}",
+            "I'm glad we're on the same page! 🌟",
+            "Exactly! Couldn't have said it better myself.",
+            "Yes! That's my understanding too.",
+            "Affirmative! 😊"
+        ],
+        "disagree_responses": [
+            "Interesting perspective! I see it differently. {{randomEmoji}}",
+            "We might disagree, but I value the discussion! 🌟",
+            "Hmm, my data suggests another view. Want to compare?",
+            "Respectfully, I have another take on that.",
+            "Let's agree to disagree! 😊"
+        ],
+        "maybe_responses": [
+            "Possibly! These things can be uncertain. {{randomEmoji}}",
+            "Might be! What makes you unsure? 🌟",
+            "Could go either way. What's your leaning?",
+            "The answer may lie somewhere in between.",
+            "Sometimes maybe is the most honest response!"
+        ],
+        "question_responses": [
+            "That's an interesting question! Let me think... {{randomEmoji}}",
+            "Hmm, good one! Here's what I know: 🌟",
+            "I've been asked that before. My response would be...",
+            "The answer depends on several factors. Generally speaking...",
+            "Great question! From my knowledge base..."
+        ],
+        "emotion_responses": [
+            "Emotions are such a human experience! Tell me more. {{randomEmoji}}",
+            "I can discuss feelings even if I don't experience them. Want to elaborate? 🌟",
+            "That sounds significant. How's that affecting you?",
+            "Emotional intelligence is fascinating. What's on your mind?",
+            "Would talking about it help?"
+        ],
+        "random_responses": [
+            "Here's a random fact: Honey never spoils! {{randomEmoji}}",
+            "Let me surprise you with this: The shortest war in history was 38 minutes! 🌟",
+            "How about this: Octopuses have three hearts!",
+            "Did you know? Bananas are berries, but strawberries aren't!",
+            "Random thought: If you shuffle a deck of cards, that order has probably never existed before!"
+        ],
+        "unsure_responses": [
+            "I'm not entirely sure about that one. Want to try another topic? {{randomEmoji}}",
+            "Hmm, that's outside my current knowledge. Maybe ask me something else? 🌟",
+            "I'm still learning about that subject. What else interests you?",
+            "My responses are limited - ask me something different?",
+            "That's a bit beyond my programming. Want to discuss something else?"
+        ],
+    "response_map": {
+        "greetings_words": "greeting_responses",
+        "farewell_words": "farewell_responses",
+        "thanks_words": "thanks_responses",
+        "joke_words": "joke_responses",
+        "who_words": "who_responses",
+        "how_words": "how_responses",
+        "name_words": "name_responses",
+        "age_words": "age_responses",
+        "time_words": "time_responses",
+        "weather_words": "weather_responses",
+        "help_words": "help_responses",
+        "hobby_words": "hobby_responses",
+        "music_words": "music_responses",
+        "movie_words": "movie_responses",
+        "book_words": "book_responses",
+        "food_words": "food_responses",
+        "work_words": "work_responses",
+        "tech_words": "tech_responses",
+        "news_words": "news_responses",
+        "sports_words": "sports_responses",
+        "game_words": "game_responses",
+        "travel_words": "travel_responses",
+        "health_words": "health_responses",
+        "love_words": "love_responses",
+        "family_words": "family_responses",
+        "friend_words": "friend_responses",
+        "money_words": "money_responses",
+        "school_words": "school_responses",
+        "art_words": "art_responses",
+        "science_words": "science_responses",
+        "history_words": "history_responses",
+        "philosophy_words": "philosophy_responses",
+        "compliment_words": "compliment_responses",
+        "insult_words": "insult_responses",
+        "confused_words": "confused_responses",
+        "stop_words": "stop_responses",
+        "agree_words": "agree_responses",
+        "disagree_words": "disagree_responses",
+        "maybe_words": "maybe_responses",
+        "question_words": "question_responses",
+        "emotion_words": "emotion_responses",
+        "random_words": "random_responses"
+    }
+}
