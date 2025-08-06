@@ -20,6 +20,16 @@ A JavaScript-based chatbot system built for speed, minimal footprint, and smart 
 - Download models from the releases page to test Semi Intelligence!
 - The `R` in the models stands for `Responses`, which means how many topics it can respond to!
 - The more responses the smarter the SI model is.
+> ### Jacob - 6R
+> Jacob is your go-to SI model if you just want super-light, personalised responses, with snappy greetings, quick jokes and friendly farewells.
+
+> ### Alex - 44R
+> Alex is best for rich, context-aware conversations that adapt to your name, time and mood—delivering personalised greetings, fun facts, jokes and helpful insights across topics!
+
+> ### Norman - 98R
+> Norman is best for smart, topic-spanning chats that personalise by name and time, thoughtful insights and responses across **many** subjects.
+
+If you’re after casual chat, I recommend Alex for its friendly tone, varied replies and intelligent insights.
 
 ---
 
