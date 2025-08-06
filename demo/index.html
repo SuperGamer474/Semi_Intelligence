@@ -44,7 +44,9 @@
         c.scrollTop = c.scrollHeight;
       }
       const MODEL_URL = 'https://semiintelligence.pythonanywhere.com/model/Alex_44R';
+      console.log('🔔 registering DOMContentLoaded listener');
       window.addEventListener('DOMContentLoaded', async () => {
+        console.log('📬 DOMContentLoaded fired');
         try {
           console.log('Loading model...');
           await loadModel(MODEL_URL);
