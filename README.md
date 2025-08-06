@@ -5,6 +5,12 @@ A JavaScript-based chatbot system built for speed, minimal footprint, and smart 
 
 ---
 
+## 😜 Try it now!
+
+Click [here](https://supergamer474.github.io/Semi_Intelligence/demo/) to try Semi Intelligence right here, right now!
+
+---
+
 ## 💾 Key Features
 
 - ⚡ **Instant**: Loads and replies in milliseconds — even on a potato 🥔
