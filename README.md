@@ -26,6 +26,7 @@ Click [here](https://supergamer474.github.io/Semi_Intelligence/demo/) to try Sem
 - Download models from the releases page to test Semi Intelligence!
 - The `R` in the models stands for `Responses`, which means how many topics it can respond to!
 - The more responses the smarter the SI model is.
+  
 > ### Jacob - 6R
 > Jacob is your go-to SI model if you just want super-light, personalised responses, with snappy greetings, quick jokes and friendly farewells.
 
